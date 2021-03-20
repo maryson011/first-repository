@@ -44,11 +44,11 @@ fimprocedimento
 procedimento cadastra_fucionario()
 inicio
 para i de 0 ate 4 faca
-     se (nome[i]="") entao
+     se (nomes[i]="") entao
      escreva("nome:")
-     leia(nome[i])
+     leia(nomes[i])
      escreva("Salario:")
-     leia(salario[i])
+     leia(salarios[i])
      escreva("Cargo:")
      leia(cargos[i])
      voltar_menu()
