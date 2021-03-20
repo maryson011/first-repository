@@ -27,6 +27,7 @@ enquanto op <> "3" faca
               escreval("Obrigado, volte sempre!")
               fimse
               fimse
+      //teste
 fimenquanto
 fimprocedimento
 procedimento cadastro()
