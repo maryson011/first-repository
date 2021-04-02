@@ -4,7 +4,7 @@ Var
 usuarios:vetor[0..4] de caractere
 idade:vetor[0..4] de inteiro
 op,nome:caractere
-i:inteiro
+i,j,s:inteiro
 
 Inicio
 
@@ -21,12 +21,14 @@ enquanto op <> "3" faca
       leia(op)
               se op = "1" entao
               cadastro()
+              fimse
               se op = "2" entao
-              busca()
+              limpatela
+              busca_usuario()
               senao
               escreval("Obrigado, volte sempre!")
               fimse
-              fimse
+
       //teste
 fimenquanto
 fimprocedimento
@@ -49,20 +51,25 @@ inicio
       inicializa()
 fimprocedimento
 
-procedimento busca()
+procedimento busca_usuario()
 inicio
-      i<-0
+      j<-0
+
       para i de 0 ate 4 faca
-      escreval("Digite o nome do usuario")
-      leia(usuario)
-      se usuario=usuarios[i] entao
-      escreval("Usuario: ",usuarios[i])
-      escreval("Idade: ",idade[i])
-      i<-i+1
-      senao
-      escreval("Usuario não cadastrado!")
-      fimse
-      fimpara
+      escreval("Digite o nome do funcionario:")
+      leia(nome)
+           se nome=usuarios[i] entao
+           escreval("Usuario: ",usuarios[i])
+           escreval("idade: ",idade[i])
+           j<-j+1
+           fimse
+           se j=0 entao
+           escreval("Funcionario inexistente.")
+           fimse
+           inicializa()
+           fimpara
+
+
 fimprocedimento
 
 inicializa()
